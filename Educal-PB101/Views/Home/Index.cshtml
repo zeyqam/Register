@@ -1,0 +1,915 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!--Start of main-->
+<main>
+    <section id="banner-area" class="banner position-relative">
+        <div class="banner_custom_shape">
+            <img src="~/assets/images/hero-1-circle.png"
+                 alt="Animated Circle"
+                 class="circle position-absolute" />
+            <img src="~/assets/images/hero-1-circle-2.png"
+                 alt="Semi circle"
+                 class="semicircle position-absolute" />
+            <img src="~/assets/images/hero-1-dot-2.png"
+                 alt="dots"
+                 class="dots position-absolute" />
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="article_wrapper">
+                        <article class="article">
+                            <h3>
+                                <span class="d-block">Access 2700+</span>
+                                <span class="yellow-shape position-relative">
+                                    Online
+                                    <img class="yellowbg position-absolute"
+                                         src="~/assets/images/yellow-bg.png"
+                                         alt="yellow" />
+                                </span>
+                                Tutorial From Top Instructor.
+                            </h3>
+                            <p>
+                                Meet university,and cultural institutions, who'll share
+                                their experience.
+                            </p>
+                            <a href="#" class="try_free btn btn-primary">View all course</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner_thumb_wrapper position-relative d-flex">
+                        <div class="banner_thumb_shapes">
+                            <img src="~/assets/images/hero-1-dot.png"
+                                 alt="Dot Square Shape"
+                                 class="dot-square position-absolute" />
+                            <img src="~/assets/images/hero-1-circle-4.png"
+                                 alt="Fill Circle Shape"
+                                 class="fill_circle position-absolute" />
+                            <img src="~/assets/images/hero-1-circle-3.png"
+                                 alt="Stroke Circle Shape"
+                                 class="stroke_circle position-absolute" />
+                        </div>
+                        <div class="banner_thumb_big">
+                            <figure>
+                                <img src="~/assets/images/hero-1.jpg" alt="Big Image" />
+                            </figure>
+                            <div class="animated_qoute position-absolute">
+                                <span>Tomorrow is our</span>
+                                <h4>“When I Grow Up” Spirit Day!</h4>
+                            </div>
+                        </div>
+                        <div class="banner_thumb_sm">
+                            <figure>
+                                <img src="~/assets/images/hero-sm-1.jpg"
+                                     alt="Small Image" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="course-area" class="course py position-relative">
+        <div class="container">
+            <div class="row justify-content-between align-items-center mb">
+                <article class="article w-50">
+                    <h3>
+                        <span class="d-block">Explore</span> Our
+                        <span class="yellow-shape position-relative">
+                            Popular
+                            <img class="yellowbg position-absolute"
+                                 src="~/assets/images/yellow-bg.png"
+                                 alt="yellow" />
+                        </span>
+                        Courses
+                    </h3>
+                </article>
+                <a href="#" class="view_all position-relative">
+                    View all category
+                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/tablet.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Data Science</h4>
+                                <p>Data is Everything</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/house.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Business</h4>
+                                <p>Improve your business</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/paint.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Art &amp; Design</h4>
+                                <p>Fun &amp; Challenging</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/paint.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Lifestyle</h4>
+                                <p>New Skills, New You</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/pie-chart.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Marketing</h4>
+                                <p>Improve your business</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/graph.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Finance</h4>
+                                <p>Fun &amp; Challenging</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/home.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Health &amp; Fitness</h4>
+                                <p>Invest to Your Body</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/electric-guitar.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Music</h4>
+                                <p>Major or Minor</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="course_category">
+                        <a href="#">
+                            <div class="category_icon">
+                                <img src="~/assets/images/compass.svg" alt="" />
+                            </div>
+                            <div class="category_content">
+                                <h4>Academics</h4>
+                                <p>High Education Level</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="course_banner_item one d-flex justify-content-between align-items-center">
+                        <div class="course_banner_content">
+                            <span>Free</span>
+                            <h3>
+                                Germany Foundation<br />
+                                Document
+                            </h3>
+                            <a href="#" class="btn btn-primary try_free">View Courses</a>
+                        </div>
+                        <div class="course_banner_thumb">
+                            <figure>
+                                <img src="~/assets/images/banner-img-1.png"
+                                     alt="Germany Foundation Course Banner" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="course_banner_item two d-flex justify-content-between align-items-center">
+                        <div class="course_banner_content">
+                            <span>New</span>
+                            <h3>
+                                Online Courses<br />
+                                From Eduka University
+                            </h3>
+                            <a href="#" class="btn btn-primary try_free">View Courses</a>
+                        </div>
+                        <div class="course_banner_thumb">
+                            <figure>
+                                <img src="~/assets/images/banner-img-2.png"
+                                     alt="Eduka University Course Banner" />
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="course-category"
+             class="course_categories py position-relative">
+        <div class="container">
+            <div class="row mb">
+                <div class="col-lg-5">
+                    <article class="article">
+                        <h3>
+                            Find the Right<br />Online
+                            <span class="yellow-shape position-relative">
+                                Course
+                                <img class="yellowbg position-absolute"
+                                     src="~/assets/images/yellow-bg.png"
+                                     alt="yellow" />
+                            </span>
+                            for you
+                        </h3>
+                        <p>
+                            You don't have to struggle alone, you've got our assistance
+                            and help.
+                        </p>
+                    </article>
+                </div>
+                <div class="col-lg-7 d-flex align-items-end justify-content-end column">
+                    <ul class="course_categoties_filter_menu d-flex pb-3">
+                        <li data-filter="all"
+                            class="filter_item position-relative active">
+                            See All
+                            <span class="position-absolute">New</span>
+                        </li>
+                        <li data-filter="trending" class="filter_item">Trending</li>
+                        <li data-filter="popularity" class="filter_item">Popularity</li>
+                        <li data-filter="featured" class="filter_item">Featured</li>
+                        <li data-filter="art_design" class="filter_item">
+                            Art &amp; Design
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course_card trending popularity art_design shown">
+                    <div class="course_card_item">
+                        <div class="course_card_header position-relative">
+                            <a href="#">
+                                <img src="~/assets/images/course11.jpg" alt="image one" />
+                            </a>
+                            <div class="course_tag position-absolute">
+                                <span>Art &amp; Design</span>
+                            </div>
+                        </div>
+                        <div class="course_card_body">
+                            <div class="course_lesson_and_rating d-flex justify-content-between">
+                                <span>
+                                    <i class="fas fa-book"></i>
+                                    10 Lesson
+                                </span>
+                                <span>
+                                    <i class="fas fa-star"></i> 4.50
+                                    <span class="rating_count">(9)</span>
+                                </span>
+                            </div>
+                            <h3 class="course_name">
+                                <a href="#">Become a product Manager learn the skills &amp; job.</a>
+                            </h3>
+                            <div class="course_instructor d-flex align-items-center">
+                                <figure class="instructor_img">
+                                    <img src="~/assets/images/teacher-1.jpg"
+                                         alt="instructor img" />
+                                </figure>
+                                <span class="instructor_name"><a href="#">Jim Séchen</a></span>
+                            </div>
+                        </div>
+                        <div class="course_card_footer d-flex justify-content-between">
+                            <span class="pricing">
+                                <del class="del">$45.00</del>
+                                <span class="current_amount">$36.00</span>
+                            </span>
+                            <a href="#" class="view_all position-relative">
+                                Know Details
+                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course_card popularity featured art_design shown">
+                    <div class="course_card_item">
+                        <div class="course_card_header position-relative">
+                            <a href="#">
+                                <img src="~/assets/images/course-2-1.jpg" alt="image one" />
+                            </a>
+                            <div class="course_tag position-absolute">
+                                <span>Mechanical</span>
+                            </div>
+                        </div>
+                        <div class="course_card_body">
+                            <div class="course_lesson_and_rating d-flex justify-content-between">
+                                <span>
+                                    <i class="fas fa-book"></i>
+                                    8 Lesson
+                                </span>
+                                <span>
+                                    <i class="fas fa-star"></i> 4.50
+                                    <span class="rating_count">(2)</span>
+                                </span>
+                            </div>
+                            <h3 class="course_name">
+                                <a href="#">Fundamentals of music theory Learn new</a>
+                            </h3>
+                            <div class="course_instructor d-flex align-items-center">
+                                <figure class="instructor_img">
+                                    <img src="~/assets/images/teacher-2.jpg"
+                                         alt="instructor img" />
+                                </figure>
+                                <span class="instructor_name"><a href="#">Barry Tone</a></span>
+                            </div>
+                        </div>
+                        <div class="course_card_footer d-flex justify-content-between">
+                            <span class="pricing">
+                                <del class="del">$25.00</del>
+                                <span class="current_amount">$19.00</span>
+                            </span>
+                            <a href="#" class="view_all position-relative">
+                                Know Details
+                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course_card marketing featured art_design shown">
+                    <div class="course_card_item">
+                        <div class="course_card_header position-relative">
+                            <a href="#">
+                                <img src="~/assets/images/course-3.jpg" alt="image one" />
+                            </a>
+                            <div class="course_tag position-absolute">
+                                <span>Development</span>
+                            </div>
+                        </div>
+                        <div class="course_card_body">
+                            <div class="course_lesson_and_rating d-flex justify-content-between">
+                                <span>
+                                    <i class="fas fa-book"></i>
+                                    12 Lesson
+                                </span>
+                                <span>
+                                    <i class="fas fa-star"></i> 4.00
+                                    <span class="rating_count">(2)</span>
+                                </span>
+                            </div>
+                            <h3 class="course_name">
+                                <a href="#">Strategy law and organization Foundation</a>
+                            </h3>
+                            <div class="course_instructor d-flex align-items-center">
+                                <figure class="instructor_img">
+                                    <img src="~/assets/images/teacher-3.jpg"
+                                         alt="instructor img" />
+                                </figure>
+                                <span class="instructor_name"><a href="#">Elon Gated</a></span>
+                            </div>
+                        </div>
+                        <div class="course_card_footer d-flex justify-content-between">
+                            <span class="pricing">
+                                <del class="del">$39.00</del>
+                                <span class="current_amount">$30.00</span>
+                            </span>
+                            <a href="#" class="view_all position-relative">
+                                Know Details
+                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course_card popularity featured shown">
+                    <div class="course_card_item">
+                        <div class="course_card_header position-relative">
+                            <a href="#">
+                                <img src="~/assets/images/course-6-1.jpg"
+                                     alt="image four" />
+                            </a>
+                            <div class="course_tag position-absolute">
+                                <span>UX Design</span>
+                            </div>
+                        </div>
+                        <div class="course_card_body">
+                            <div class="course_lesson_and_rating d-flex justify-content-between">
+                                <span>
+                                    <i class="fas fa-book"></i>
+                                    10 Lesson
+                                </span>
+                                <span>
+                                    <i class="fas fa-star"></i> 4.50
+                                    <span class="rating_count">(2)</span>
+                                </span>
+                            </div>
+                            <h3 class="course_name">
+                                <a href="#">Creative writing through Storytelling</a>
+                            </h3>
+                            <div class="course_instructor d-flex align-items-center">
+                                <figure class="instructor_img">
+                                    <img src="~/assets/images/teacher-6.jpg"
+                                         alt="instructor img" />
+                                </figure>
+                                <span class="instructor_name"><a href="#">Shahnewaz Sakil</a></span>
+                            </div>
+                        </div>
+                        <div class="course_card_footer d-flex justify-content-between">
+                            <span class="pricing">
+                                <del class="del">$45.00</del>
+                                <span class="current_amount">$36.00</span>
+                            </span>
+                            <a href="#" class="view_all position-relative">
+                                Know Details
+                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course_card trending featured art_design shown">
+                    <div class="course_card_item">
+                        <div class="course_card_header position-relative">
+                            <a href="#">
+                                <img src="~/assets/images/course-4-1.jpg" alt="image one" />
+                            </a>
+                            <div class="course_tag position-absolute">
+                                <span>Marketing</span>
+                            </div>
+                        </div>
+                        <div class="course_card_body">
+                            <div class="course_lesson_and_rating d-flex justify-content-between">
+                                <span>
+                                    <i class="fas fa-book"></i>
+                                    5 Lesson
+                                </span>
+                                <span>
+                                    <i class="fas fa-star"></i> 5.2
+                                    <span class="rating_count">(2)</span>
+                                </span>
+                            </div>
+                            <h3 class="course_name">
+                                <a href="#">The business Intelligence analyst Course 2022</a>
+                            </h3>
+                            <div class="course_instructor d-flex align-items-center">
+                                <figure class="instructor_img">
+                                    <img src="~/assets/images/teacher-4.jpg"
+                                         alt="instructor img" />
+                                </figure>
+                                <span class="instructor_name"><a href="#">Eleanor Fant</a></span>
+                            </div>
+                        </div>
+                        <div class="course_card_footer d-flex justify-content-between">
+                            <span class="pricing">
+                                <span class="current_amount">$52.00</span>
+                            </span>
+                            <a href="#" class="view_all position-relative">
+                                Know Details
+                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course_card trending popularity art_design shown">
+                    <div class="course_card_item">
+                        <div class="course_card_header position-relative">
+                            <a href="#">
+                                <img src="~/assets/images/course-5-1.jpg" alt="image one" />
+                            </a>
+                            <div class="course_tag position-absolute">
+                                <span>Audio &amp; Music</span>
+                            </div>
+                        </div>
+                        <div class="course_card_body">
+                            <div class="course_lesson_and_rating d-flex justify-content-between">
+                                <span>
+                                    <i class="fas fa-book"></i>
+                                    4 Lesson
+                                </span>
+                                <span>
+                                    <i class="fas fa-star"></i> 5.00
+                                    <span class="rating_count">(2)</span>
+                                </span>
+                            </div>
+                            <h3 class="course_name">
+                                <a href="#">Build your media and Public presence</a>
+                            </h3>
+                            <div class="course_instructor d-flex align-items-center">
+                                <figure class="instructor_img">
+                                    <img src="~/assets/images/teacher-5.jpg"
+                                         alt="instructor img" />
+                                </figure>
+                                <span class="instructor_name"><a href="#">Eleanor Fant</a></span>
+                            </div>
+                        </div>
+                        <div class="course_card_footer d-flex justify-content-between">
+                            <span class="pricing">
+                                <span class="current_amount">$25.00</span>
+                            </span>
+                            <a href="#" class="view_all position-relative">
+                                Know Details
+                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="events" class="events__area pt-115 pb-120 p-relative">
+        <div class="events__shape">
+            <img class="events-1-shape"
+                 src="~/assets/images/events-shape.png"
+                 alt="" />
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-4 offset-xxl-4">
+                    <div class="section__title-wrapper mb-60 text-center">
+                        <h2 class="section__title">
+                            Current
+                            <span class="yellow-bg yellow-bg-big">
+                                Events<img src="~/assets/images/yellow-bg.png" alt="" />
+                            </span>
+                        </h2>
+                        <p>We found 13 events available for you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="events__item mb-10 hover__active active">
+                        <div class="events__item-inner d-sm-flex align-items-center justify-content-between white-bg">
+                            <div class="events__content">
+                                <div class="events__meta">
+                                    <span>Jun 14, 2022</span>
+                                    <span>12:00 am - 2:30 pm</span>
+                                    <span>New York</span>
+                                </div>
+                                <h3 class="events__title">
+                                    <a href="event-details.html">Digital transformation conference</a>
+                                </h3>
+                            </div>
+                            <div class="events__more">
+                                <a href="event-details.html" class="link-btn">
+                                    View More
+                                    <i class="fa fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="events__item mb-10 hover__active">
+                        <div class="events__item-inner d-sm-flex align-items-center justify-content-between white-bg">
+                            <div class="events__content">
+                                <div class="events__meta">
+                                    <span>April 10, 2022</span>
+                                    <span>9:00 am - 5:00 pm</span>
+                                    <span>Mindahan</span>
+                                </div>
+                                <h3 class="events__title">
+                                    <a href="event-details.html">World education day conference</a>
+                                </h3>
+                            </div>
+                            <div class="events__more">
+                                <a href="event-details.html" class="link-btn">
+                                    View More
+                                    <i class="fa fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="events__item mb-10 hover__active">
+                        <div class="events__item-inner d-sm-flex align-items-center justify-content-between white-bg">
+                            <div class="events__content">
+                                <div class="events__meta">
+                                    <span>July 16, 2022</span>
+                                    <span>10:30 am - 1:30 pm</span>
+                                    <span>Weedpatch</span>
+                                </div>
+                                <h3 class="events__title">
+                                    <a href="event-details.html">Foundations of global health</a>
+                                </h3>
+                            </div>
+                            <div class="events__more">
+                                <a href="event-details.html" class="link-btn">
+                                    View More
+                                    <i class="fa fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="events__item mb-10 hover__active">
+                        <div class="events__item-inner d-sm-flex align-items-center justify-content-between white-bg">
+                            <div class="events__content">
+                                <div class="events__meta">
+                                    <span>March 24, 2022</span>
+                                    <span>10:30 am - 12:00 pm</span>
+                                    <span>Lnland</span>
+                                </div>
+                                <h3 class="events__title">
+                                    <a href="event-details.html">Business creativity workshops</a>
+                                </h3>
+                            </div>
+                            <div class="events__more">
+                                <a href="event-details.html" class="link-btn">
+                                    View More
+                                    <i class="fa fa-arrow-right"></i>
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="price__area pt-60 pb-130">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-4 offset-xxl-4">
+                    <div class="section__title-wrapper mb-60 text-center">
+                        <h2 class="section__title">
+                            Simple <br />
+                            All Inclusive
+                            <span class="yellow-bg yellow-bg-big">
+                                Pricing<img src="~/assets/images/yellow-bg.png" alt="" />
+                            </span>
+                        </h2>
+                        <p>No contracts. No surprise fees.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="price__tab-btn text-center mb-50">
+                        <nav>
+                            <div class="nav nav-tabs justify-content-center"
+                                 id="nav-tab"
+                                 role="tablist">
+                                <button class="nav-link"
+                                        id="nav-monthly-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#nav-monthly"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="nav-monthly"
+                                        aria-selected="true">
+                                    monthly plan
+                                </button>
+                                <button class="nav-link active"
+                                        id="nav-annually-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#nav-annually"
+                                        type="button"
+                                        role="tab"
+                                        aria-controls="nav-annually"
+                                        aria-selected="false">
+                                    Annual Plan
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="price__tab-content">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade"
+                                 id="nav-monthly"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-monthly-tab">
+                                <div class="row">
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        <div class="price__item grey-bg mb-30 p-relative">
+                                            <div class="price__head">
+                                                <h3>Gold</h3>
+                                                <p>Perfect for small marketing teams</p>
+                                            </div>
+                                            <div class="price__tag mb-25">
+                                                <h4>$59<span>.99 / annually</span></h4>
+                                            </div>
+                                            <div class="price__features mb-40">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Course
+                                                        Discussions
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Content Library
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>1-hour
+                                                        Mentorship
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="contact.html" class="e-btn e-btn-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        <div class="price__item grey-bg mb-30 p-relative">
+                                            <div class="price__offer">
+                                                <span>Best Value</span>
+                                            </div>
+                                            <div class="price__head">
+                                                <h3>Diamond</h3>
+                                                <p>Perfect for small marketing teams</p>
+                                            </div>
+                                            <div class="price__tag mb-25">
+                                                <h4>$99<span>.99 / annually</span></h4>
+                                            </div>
+                                            <div class="price__features mb-40">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Course
+                                                        Discussions
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Content Library
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>1-hour
+                                                        Mentorship
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Online Course
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="contact.html" class="e-btn e-btn-border">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show active"
+                                 id="nav-annually"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-annually-tab">
+                                <div class="row">
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        <div class="price__item grey-bg mb-30 p-relative">
+                                            <div class="price__head">
+                                                <h3>Gold</h3>
+                                                <p>Perfect for small marketing teams</p>
+                                            </div>
+                                            <div class="price__tag mb-25">
+                                                <h4>$59<span>.99 / annually</span></h4>
+                                            </div>
+                                            <div class="price__features mb-40">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Course
+                                                        Discussions
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Content Library
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>1-hour
+                                                        Mentorship
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="contact.html" class="e-btn e-btn-4">Get Started</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                                        <div class="price__item grey-bg mb-30 p-relative">
+                                            <div class="price__offer">
+                                                <span>Best Value</span>
+                                            </div>
+                                            <div class="price__head">
+                                                <h3>Diamond</h3>
+                                                <p>Perfect for small marketing teams</p>
+                                            </div>
+                                            <div class="price__tag mb-25">
+                                                <h4>$99<span>.99 / annually</span></h4>
+                                            </div>
+                                            <div class="price__features mb-40">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Course
+                                                        Discussions
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Content Library
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>1-hour
+                                                        Mentorship
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa-solid fa-check"></i>Online Course
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <a href="contact.html" class="e-btn e-btn-border">Get Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta__area mb--120">
+        <div class="container">
+            <div class="cta__inner blue-bg fix">
+                <div class="cta__shape">
+                    <img src="~/assets/images/cta-shape.png" alt="" />
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-xxl-7 col-xl-7 col-lg-8 col-md-8">
+                        <div class="cta__content">
+                            <h3 class="cta__title">
+                                You can be your own Guiding star with our help
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-xxl-5 col-xl-5 col-lg-4 col-md-4">
+                        <div class="cta__more d-md-flex justify-content-end p-relative z-index-1">
+                            <a href="contact.html" class="e-btn e-btn-white">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--End of main-->

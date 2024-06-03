@@ -1,0 +1,102 @@
+﻿@model Course
+@{
+    ViewData["Title"] = "Index";
+}
+@section css{
+    <link rel="stylesheet" href="~/css/product.css">
+}
+
+<section id="course-category"
+         class="course_categories py position-relative">
+    <div class="container">
+        <div class="row mb">
+            <div class="col-lg-5">
+                <article class="article">
+                    <h3>
+                        Find the Right<br />Online
+                        <span class="yellow-shape position-relative">
+                            Course
+                            <img class="yellowbg position-absolute"
+                                 src="./assets/images/yellow-bg.png"
+                                 alt="yellow" />
+                        </span>
+                        for you
+                    </h3>
+                    <p>
+                        You don't have to struggle alone, you've got our assistance
+                        and help.
+                    </p>
+                </article>
+            </div>
+            <div class="col-lg-7 d-flex align-items-end justify-content-end column">
+                <ul class="course_categoties_filter_menu d-flex pb-3">
+                    <li data-filter="all"
+                        class="filter_item position-relative active">
+                        See All
+                        <span class="position-absolute">New</span>
+                    </li>
+                    <li data-filter="trending" class="filter_item">Trending</li>
+                    <li data-filter="popularity" class="filter_item">Popularity</li>
+                    <li data-filter="featured" class="filter_item">Featured</li>
+                    <li data-filter="art_design" class="filter_item">
+                        Art &amp; Design
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.CourseImages)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 mb-4 course_card trending popularity art_design shown">
+                    <div class="course_card_item">
+                        <div class="course_card_header position-relative">
+                            <a href="#">
+                                <img src="~/assets/images/@item.Name" class="border p-2">
+                            </a>
+                            <div class="course_tag position-absolute">
+                                <span>@item.Course.</span>
+                            </div>
+                        </div>
+                        <div class="course_card_body">
+                            <div class="course_lesson_and_rating d-flex justify-content-between">
+                                <span>
+                                    <i class="fas fa-book"></i>
+                                    @item.Course.LessonCount
+                                </span>
+                                <span>
+                                    <i class="fas fa-star"></i> 4.50
+                                    <span class="rating_count">(9)</span>
+                                </span>
+                            </div>
+                            <h3 class="course_name">
+                                <a href="#">Become a product Manager learn the skills &amp; job.</a>
+                            </h3>
+                            <div class="course_instructor d-flex align-items-center">
+                                <figure class="instructor_img">
+                                    <img src="./assets/images/teacher-1.jpg"
+                                         alt="instructor img" />
+                                </figure>
+                                <span class="instructor_name"><a href="#">@item.Course.InstructorName</a></span>
+                            </div>
+                        </div>
+                        <div class="course_card_footer d-flex justify-content-between">
+                            <span class="pricing">
+                                <del class="del">$45.00</del>
+                                <span class="current_amount">$@item.Course.Price.ToString(Model.Price % 1 == 0 ? "0" : "0.00")</span>
+                            </span>
+                            <a href="#" class="view_all position-relative">
+                                Know Details
+                                <i class="fas fa-arrow-right"></i>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+            
+
+            
+        </div>
+    </div>
+</section>
+

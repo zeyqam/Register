@@ -1,0 +1,298 @@
+﻿@model HomeVM
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+<body>
+    <div id="loading" style="display: none">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="loading-content">
+                    <img class="loading-logo-text"
+                         src="~/assets/img/logo/logo-text-2.png"
+                         alt="" />
+                    <div class="loading-stroke">
+                        <img class="loading-logo-icon"
+                             src="~/assets/img/logo/logo-icon.png"
+                             alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="progress-wrap active-progress">
+        <svg class="progress-circle svg-content"
+             width="100%"
+             height="100%"
+             viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                  style="
+            transition: stroke-dashoffset 10ms linear 0s;
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 39.8738;
+          "></path>
+        </svg>
+    </div>
+    <!-- Start of header -->
+    <header>
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
+                    <div class="header-left d-flex align-items-center">
+                        <a href="#" class="logo">
+                            <figure>
+                                <img src="~/assets/images/logo-black.png" alt="logo" />
+                            </figure>
+                        </a>
+                        <ul class="header-category position-relative">
+                            <li class="drop_down_btn position-relative">
+                                <a href="#" class="d-flex align-items-center">
+                                    <div class="header-category-icon">
+                                        <img src="~/assets/images/dot-menu.svg" alt="" />
+                                    </div>
+                                    <span>Category</span>
+                                </a>
+                                <ul class="category_drop_down_menu drop_down_menu position-absolute">
+                                    @foreach (var item in Model.Categories)
+                                    {
+                                        <li><a href="" data-id="@item.Id">@item.Name</a></li>
+                                    }
+                                    
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-10 col-sm-8 col-6 me-0 column">
+                    <div class="header-right d-flex align-items-center justify-content-around">
+                        <nav class="main-menu">
+                            <ul class="d-flex align-items-center justify-content-evenly">
+                                <li title="Home" class="drop_down_btn position-relative">
+                                    <a href="./index.html">
+                                        Home <span><i class="fas fa-chevron-down"></i></span>
+                                    </a>
+                                    <ul class="drop_down_menu position-absolute">
+                                        <li title="Home 01"><a href="#">Home 01</a></li>
+                                        <li title="Home 02"><a href="#">Home 02</a></li>
+                                        <li title="Home 03"><a href="#">Home 03</a></li>
+                                    </ul>
+
+                                </li>
+                                
+                                <li title="Courses" class="drop_down_btn position-relative">
+                                    <a href="./courses.html">
+                                        Courses <span><i class="fas fa-chevron-down"></i></span>
+                                    </a>
+                                </li>
+                                <li title="Blog" class="drop_down_btn position-relative">
+                                    <a href="./blog.html">
+                                        Blog <span><i class="fas fa-chevron-down"></i></span>
+                                    </a>
+                                </li>
+                                <li title="Pages" class="drop_down_btn position-relative">
+                                    <a href="#">
+                                        Pages <span><i class="fas fa-chevron-down"></i></span>
+                                    </a>
+                                </li>
+                                <li title="Contact" class="drop_down_btn position-relative">
+                                    <a href="./contact.html">Contact </a>
+                                </li>
+                                <li title="Account" class="drop_down_btn position-relative">
+                                    <a href="./index.html">
+                                        Account <span><i class="fas fa-chevron-down"></i></span>
+                                    </a>
+                                    <ul class="drop_down_menu position-absolute">
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+
+                                            
+                                            <li class=""><a class="px-1" href="">Hello, @Model.UserFullName</a></li>
+                                            <li class="">
+                                                <form method="post" asp-controller="Account" asp-action="Logout">
+                                                    <button type="submit" class="px-1">Logout</button>
+                                                </form>
+
+                                            </li>
+                                        }
+                                        else
+                                        {
+                                            <li title="Sign up"><a asp-controller="Account" asp-action="SignUp">Sign up</a></li>
+                                            <li title="Sign in"><a href="#">Sign in</a></li>
+                                        }
+                                       
+                                        
+                                    </ul>
+
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="form_and_btn d-flex align-items-center justify-content-between">
+                            <form action="#" class="d-flex position-relative">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                                <input type="text" placeholder="Search for products..." />
+                                <a href="#" class="shopping_cart_and_label position-relative">
+                                    <div class="shopping_cart_icon">
+                                        <svg viewBox="0 0 24 24">
+                                            <circle class="st0" cx="9" cy="21" r="1"></circle>
+                                            <circle class="st0" cx="20" cy="21" r="1"></circle>
+                                            <path class="st0"
+                                                  d="M1,1h4l2.7,13.4c0.2,1,1,1.6,2,1.6h9.7c1,0,1.8-0.7,2-1.6L23,6H6"></path>
+                                        </svg>
+                                    </div>
+                                    <span class="shopping_cart_label">2</span>
+                                </a>
+                            </form>
+                            <a href="#" class="try_free btn btn-primary">Try for free</a>
+                        </div>
+                        <div class="toggle-btn position-relative">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="overlay position-fixed"></div>
+    <!-- End of header -->
+            @RenderBody()
+    <!--Start of footer-->
+    <footer>
+        <div class="footer__area footer-bg">
+            <div class="footer__top pt-190 pb-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="footer__widget mb-50">
+                                <div class="footer__widget-head mb-22">
+                                    <div class="footer__logo">
+                                        <a href="index-2.html">
+                                            <img src="~/assets/images/logo.png" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="footer__widget-body">
+                                    <p>
+                                        Great lesson ideas and lesson plans for ESL teachers!
+                                        Educators can customize lesson plans to best.
+                                    </p>
+
+                                    <div class="footer__social">
+                                        <ul>
+                                            <li>
+                                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="tw">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="pin">
+                                                    <i class="fa-brands fa-pinterest"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2 offset-xxl-1 col-xl-2 offset-xl-1 col-lg-3 offset-lg-0 col-md-2 offset-md-1 col-sm-5 offset-sm-1">
+                            <div class="footer__widget mb-50">
+                                <div class="footer__widget-head mb-22">
+                                    <h3 class="footer__widget-title">Company</h3>
+                                </div>
+                                <div class="footer__widget-body">
+                                    <div class="footer__link">
+                                        <ul>
+                                            <li><a href="#">About</a></li>
+                                            <li><a href="#">Courses</a></li>
+                                            <li><a href="#">Events</a></li>
+                                            <li><a href="#">Instructor</a></li>
+                                            <li><a href="#">Career</a></li>
+                                            <li><a href="#">Become a Teacher</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2 col-xl-2 col-lg-2 offset-lg-0 col-md-3 offset-md-1 col-sm-6">
+                            <div class="footer__widget mb-50">
+                                <div class="footer__widget-head mb-22">
+                                    <h3 class="footer__widget-title">Platform</h3>
+                                </div>
+                                <div class="footer__widget-body">
+                                    <div class="footer__link">
+                                        <ul>
+                                            <li><a href="#">Browse Library</a></li>
+                                            <li><a href="#">Library</a></li>
+                                            <li><a href="#">Partners</a></li>
+                                            <li><a href="#">News & Blogs</a></li>
+                                            <li><a href="#">FAQs</a></li>
+                                            <li><a href="#">Tutorials</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-5 col-sm-6">
+                            <div class="footer__widget footer__pl-70 mb-50">
+                                <div class="footer__widget-head mb-22">
+                                    <h3 class="footer__widget-title">Subscribe</h3>
+                                </div>
+                                <div class="footer__widget-body">
+                                    <div class="footer__subscribe">
+                                        <form action="#">
+                                            <div class="footer__subscribe-input mb-15">
+                                                <input type="email"
+                                                       placeholder="Your email address" />
+                                                <button type="submit">
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                    <i class="fa-solid fa-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <p>
+                                            Get the latest news and updates right at your inbox.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xxl-12">
+                            <div class="footer__copyright text-center">
+                                <p>
+                                    © 2022 Educal, All Rights Reserved. Design By
+                                    <a href="index-2.html">Theme Pure</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End of footer-->
+    <script src="~/assets/js/script.js"></script>
+</body>
+</html>

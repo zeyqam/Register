@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CourseVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Products</h2>
+    <div class="create-operation">
+        <a asp-action="Create" class="btn btn-success text-white btn-sm"><i class="mdi mdi-plus"></i></a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>Instructor name</th>
+                    <th>Lesson count</th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Category
+                    </th>
+
+
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="category-data">
+                        <td class="py-1">
+                            <img src="~/img/@item.MainImage" />
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.Description
+                        </td>
+                        <td>@item.InstructorName
+                        </td>
+                        <td>@item.LessonCount
+                        </td>
+                        <td>
+                            @item.Price
+                        </td>
+                        <td>
+                            @item.CategoryName
+                        </td>
+                        
+                        <td>
+                            <a class="btn btn-primary text-white btn-sm" asp-action="Detail" asp-route-id="@item.Id"><i class="mdi mdi-information-variant"></i></a>
+                            <a class="btn btn-warning text-white btn-sm" asp-action="Edit" asp-route-id="@item.Id"><i class="mdi mdi-grease-pencil"></i></a>
+                            <button type="button" class="btn btn-danger text-white btn-sm delete-btn" data-id="@item.Id"><i class="mdi mdi mdi-delete"></i></button>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+
